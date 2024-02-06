@@ -42,6 +42,9 @@ vim.o.termguicolors = true
 
 vim.o.cursorline = true
 
+vim.o.linebreak = true
+vim.o.breakindent = true
+
 -- Enable transparency
 -- vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
 

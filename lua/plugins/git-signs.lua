@@ -10,12 +10,6 @@ return {
       topdelete = { text = '‾' },
       changedelete = { text = '~' },
     },
-    current_line_blame = true,
-    current_line_blame_opts = {
-      virt_text = true,
-      delay = 500,
-    },
-    current_line_blame_formatter = '<author>, <author_time:%d-%m-%Y> - <summary>',
     on_attach = function(bufnr)
       local gs = package.loaded.gitsigns
 
