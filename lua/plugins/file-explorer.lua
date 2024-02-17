@@ -1,29 +1,18 @@
 return {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-        "MunifTanjim/nui.nvim",
-    },
+    "nvim-tree/nvim-tree.lua",
     config = function()
-        require("neo-tree").setup({
-            enable_normal_mode_for_inputs = true,
-            filesystem = {
-                filtered_items = {
-                    visible = true,
-                    hide_dotfiles = false,
-                    hide_gitignored = false,
-                    hide_by_name = {
-                        "node_modules"
-                    },
-                },
-                follow_current_file = {
-                    enabled = true,
-                },
+        vim.g.loaded_netrw = 1
+        vim.g.loaded_netrwPlugin = 1
+        require("nvim-tree").setup({
+            update_focused_file = {
+                enable = true,
+            },
+            filters = {
+                dotfiles = false,
             },
         })
-        vim.keymap.set("n", "<C-b>", ":Neotree toggle<CR>", {})
-        vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
-    end,
+        vim.g.nvim_tree_respect_buf_cwd = 1
+        vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+    end
 }
 
