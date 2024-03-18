@@ -4,7 +4,7 @@ return {
   opts = {
     indent = {
       char = "▏",
-      highlight = { "IblIndentCustomColor" },
+      -- highlight = { "IblIndentCustomColor" },
     },
     scope = {
       show_start = false,
