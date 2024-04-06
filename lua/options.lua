@@ -25,6 +25,8 @@ vim.opt.scrolloff = 10
 vim.opt.guicursor = ""
 
 vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
